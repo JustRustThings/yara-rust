@@ -17,7 +17,7 @@ bundled-4_1_2 = []
 vendored = ["cc", "globwalk"]
 
 [build-dependencies]
-bindgen = { version = "0.58", optional = true }
+bindgen = { version = "0.59", optional = true }
 cc = { version = "1.0", optional = true }
 globwalk = { version = "0.8", optional = true }
 
