@@ -103,6 +103,7 @@ mod build {
         } else if cfg!(feature = "openssl-static") {
             println!("cargo:rustc-link-lib=static=ssl");
             println!("cargo:rustc-link-lib=static=crypto");
+        } else if cfg!(feature = "openssl-nolink") {
         } else {
             println!("cargo:rustc-link-lib=dylib=ssl");
             println!("cargo:rustc-link-lib=dylib=crypto");
