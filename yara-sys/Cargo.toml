@@ -25,6 +25,7 @@ module-hash = []
 profiling = []
 ndebug = []
 openssl-static = []
+openssl-nolink = []
 yara-static = []
 
 [build-dependencies]
