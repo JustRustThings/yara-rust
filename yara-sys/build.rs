@@ -168,11 +168,9 @@ mod build {
 
         // Use correct proc functions
         match std::env::var("CARGO_CFG_TARGET_OS").ok().unwrap().as_str() {
-            "windows" => {
-                println!("cargo:rustc-link-lib=dylib=Advapi32");
-                cc.file(basedir.join("proc").join("windows.c"))
-                    .define("USE_WINDOWS_PROC", "")
-            }
+            "windows" => cc
+                .file(basedir.join("proc").join("windows.c"))
+                .define("USE_WINDOWS_PROC", ""),
             "linux" => cc
                 .file(basedir.join("proc").join("linux.c"))
                 .define("USE_LINUX_PROC", ""),
